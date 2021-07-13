@@ -1,0 +1,32 @@
+.loader {
+    position: fixed;
+    z-index: 99999999999999999;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+
+    &__circle {
+        border: 0 solid transparent;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        @include absCenter;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: inherit;
+            height: inherit;
+            border: 1rem solid $color-orange-dark-1;
+            border-radius: 50%;
+            opacity: 0;
+            animation: loader 2s linear infinite;
+        }
+
+        &::before{
+            animation-delay: .5s;
+        }
+    }
+}

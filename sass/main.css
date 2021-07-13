@@ -122,6 +122,77 @@
   }
 }
 
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 99999999999999999;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.loader__circle {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.loader__circle::after, .loader__circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 1rem solid #e94100;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: loader 2s linear infinite;
+          animation: loader 2s linear infinite;
+}
+
+.loader__circle::before {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -168,6 +239,8 @@ body {
   color: #fff;
   -webkit-animation: moveDown 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
           animation: moveDown 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -188,6 +261,8 @@ body {
 .header__heading--2-fname {
   -webkit-animation: moveRight 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
           animation: moveRight 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -195,6 +270,8 @@ body {
 .header__heading--2-lname {
   -webkit-animation: moveLeft 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
           animation: moveLeft 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -204,6 +281,8 @@ body {
   color: #fff;
   -webkit-animation: moveUp 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
           animation: moveUp 1s cubic-bezier(0.64, -0.1, 0.49, 0.67);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
