@@ -1,56 +1,84 @@
 @keyframes moveUp {
     0%{
         transform: translateY(10rem);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.3;
     }
 
     75%{
         transform: translateY(-1rem);
+        opacity: 0.6;
     }
 
     100%{
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes moveDown {
     0%{
         transform: translateY(-10rem);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.3;
     }
 
     75%{
         transform: translateY(1rem);
+        opacity: 0.6;
     }
 
     100%{
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes moveRight {
     0%{
         transform: translateX(-10rem);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.3;
     }
 
     75%{
         transform: translateX(1rem);
+        opacity: 0.6;
     }
 
     100%{
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
 @keyframes moveLeft {
     0%{
         transform: translateX(10rem);
+        opacity: 0;
     }
 
+    50%{
+        opacity: 0.3;
+    }
+    
     75%{
         transform: translateX(-1rem);
+        opacity: 0.6;
     }
 
     100%{
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
