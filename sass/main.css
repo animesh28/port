@@ -140,7 +140,7 @@ body {
 }
 
 .header {
-  background: url(../../img/header.jpg);
+  background: url(../img/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
